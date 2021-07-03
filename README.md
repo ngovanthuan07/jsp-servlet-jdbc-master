@@ -15,4 +15,4 @@
   - class:
    - AbstractDAO: `public class AbstractDAO<T> implements GenericDAO<T>`
    - tClassDAO: `public class tClassDAO extends AbstractDAO<tClassModel> implements IClassDAO`
-   việc triển khai tầng DAO sẽ tránh triển khai nhiều lần
+  - Việc triển khai tầng DAO sẽ tránh triển khai nhiều lần
