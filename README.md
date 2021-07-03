@@ -8,4 +8,15 @@
 
 -package mapper: dùng để lưu dữ liêu sau khi truy vấn, tham số truyền vào là ResultSet chứa các các bản dữ liệu sau truy vấn.
 
-
+```
+for(let i = 0; i <  list__btn.length; i++)
+{
+  list__btn[i].onclick = function(){
+    let j = 0;
+    while(j < list__btn.length){
+      list__btn[j++].className = 'btnIndex btn btn-light';
+    }
+    list__btn[i].className = 'btnIndex btn btn-light active';
+  }
+}
+```
