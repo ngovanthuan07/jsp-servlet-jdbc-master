@@ -3,7 +3,7 @@
 - Object... parameters: chứa các mảng dữ liễu để thực hiện câu truy vẩn, cụ thể là mỗi dấu ? ứng với một phần thử trong mảng.
 
 ```
- select * form news where news.A = ? => parameters[index]
+ select * form news where news.A = ? dầu "?" là => parameters[index]
 ```
 
 - package mapper: dùng để lưu dữ liêu sau khi truy vấn, tham số truyền vào là ResultSet chứa các các bản dữ liệu sau truy vấn.
