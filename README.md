@@ -13,6 +13,6 @@
    - GenericDAO: `public interface GenericDAO<T> `
    - IClassDAO: `public interface IClassDAO extends GenericDAO<tClassModel>`
   - class:
-   - AbstractDAO: `public class AbstractDAO<T> implements GenericDAO<T>`
+   - AbstractDAO: `public class AbstractDAO<T> implements GenericDAO<T>` để triển khai interface
    - tClassDAO: `public class tClassDAO extends AbstractDAO<tClassModel> implements IClassDAO`
   - Việc triển khai tầng DAO sẽ tránh triển khai nhiều lần
