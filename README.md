@@ -34,6 +34,7 @@ public class FormUtil {
 ```
 - SessionUtil: dùng để lưu đăng nhập...
 ```
+public class SessionUtil {
     private static SessionUtil sessionUtil = null;
 
     public static SessionUtil getInstance() {
@@ -54,4 +55,5 @@ public class FormUtil {
     public void removeValue(HttpServletRequest request, String key) {
         request.getSession().removeAttribute(key);
     }
+}
 ```
