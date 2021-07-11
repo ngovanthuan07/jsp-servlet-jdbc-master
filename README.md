@@ -101,3 +101,26 @@ public class AuthorizationFilter implements Filter {
     }
 }
 ```
+
+- Phân trang:
+	- totalItem: số lượng item trong database
+	- maxPageItem: số lượng page tối thiểu trên 1 trang (ví dụ: trang 1 chỉ có tối đa 10 item)
+	- page: page đang đứng (đang đứng ở page 1)
+	- totalPages: số lượng page (tổng số page cần hiển thị)
+	- <code>cau lenh sql => limit offset, maxPageItem</code>
+
+```
+	- totalPages = (int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()) 
+	- offset = (page - 1) * maxPageItem 
+	(page - 1): sql bắt đầu từ 0 mà page lại = 1
+	
+	Ví dụ: cho maxPageItem = 10, totalItem = 100, page = 1.
+	
+	totalPages = totalItem / maxPageItem = 100 / 10 = 10
+	offset = (page - 1) * maxPageItem = (1-1) * 10 = 0
+	sql = limit 0,10
+	cho page = 2 ➡️ offset = 10 
+	sql = limit 10,10
+	cho page = 3 ➡️ offset = 20
+	sql = limit 20,10
+```
