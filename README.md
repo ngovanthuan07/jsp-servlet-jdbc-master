@@ -114,7 +114,8 @@ public class AuthorizationFilter implements Filter {
 	- offset = (page - 1) * maxPageItem 
 	(page - 1): sql bắt đầu từ 0 mà page lại = 1
 	
-	Ví dụ: cho maxPageItem = 10, totalItem = 100, page = 1.
+	Ví dụ: cho maxPageItem = 10, totalItem = 100
+		page = 1.
 	
 	totalPages = totalItem / maxPageItem = 100 / 10 = 10
 	offset = (page - 1) * maxPageItem = (1-1) * 10 = 0
