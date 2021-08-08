@@ -127,3 +127,42 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:redirect url="/trang-chu"/>
 ```
+
+- Sử dụng sitemesh ta phải tạo trong webapp 1 thư mục decorators
+- Trong thư mục WEB-INF ta thêm fuile `decorators.xml` :
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/decorators">
+	<excludes>
+		<pattern>/api*</pattern>
+	</excludes>
+
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/admin*</pattern>
+	</decorator>
+
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+
+	<decorator name="login" page="login.jsp">
+		<pattern>/dang-nhap</pattern>
+	</decorator>
+</decorators>
+```
+- Muốn sử dụng đượng `sitemesh decorators` thì ta phải tạo thư mục `common` thêm file `taglib.jsp`:
+```
+%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
+```
+
+- Trong thư mục WEB-INF tạo thư mục `beans.xml`:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://java.sun.com/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+</beans>
+```
