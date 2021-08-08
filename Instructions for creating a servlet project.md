@@ -1,4 +1,4 @@
-- Trong file pom.xml thêm thư viện:
+- Trong file `pom.xml` thêm thư viện:
 ```
 <properties>
 		<jsp.api.version>2.0</jsp.api.version>
@@ -100,7 +100,7 @@
 	</build>
 ```
 
-- Trong thư mục webapp tạo 1 thư mục WEB-INF/web.xml
+- Trong thư mục `webapp` tạo 1 thư mục `WEB-INF ` và trong thư mục `WEB-INF` tạo 1 file `web.xml`
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -122,14 +122,14 @@
 
 </web-app>
 ```
-- Trong thư mục webapp tạo file jsp:
+- Trong thư mục `webapp` tạo file `index.jsp`:
 ```
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:redirect url="/trang-chu"/>
 ```
 
-- Sử dụng sitemesh ta phải tạo trong webapp 1 thư mục decorators
-- Trong thư mục WEB-INF ta thêm fuile `decorators.xml` :
+- Sử dụng sitemesh ta phải tạo trong `webapp` 1 thư mục `decorators`
+- Trong thư mục WEB-INF ta thêm file `decorators.xml` :
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -157,7 +157,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
 ```
 
-- Trong thư mục WEB-INF tạo thư mục `beans.xml`:
+- Trong thư mục `WEB-INF` tạo thư mục `beans.xml`:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://java.sun.com/xml/ns/javaee"
