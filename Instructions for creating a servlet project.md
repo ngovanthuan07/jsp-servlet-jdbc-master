@@ -151,6 +151,17 @@
 	</decorator>
 </decorators>
 ```
+ Sau đó trong file `web.xm` thêm vào:
+ ```
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ ```
 - Muốn sử dụng đượng `sitemesh decorators` thì ta phải tạo thư mục `common` thêm file `taglib.jsp`:
 ```
 %@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
