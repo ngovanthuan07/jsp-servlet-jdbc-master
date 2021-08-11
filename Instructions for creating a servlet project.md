@@ -181,7 +181,7 @@
 ```
 	<filter>
 		<filter-name>servletFilter</filter-name>
-		<filter-class>com.quanlybanhang.filter.AuthorizationFilter</filter-class>
+		<filter-class>đường dẫn class AuthorizationFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>servletFilter</filter-name>
